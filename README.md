@@ -1,10 +1,20 @@
-# Text-Free Differentiable Fault-Ratio Adjudication from First-Person Dashcam Video
+# Text-Free Fault-Ratio Estimation from Dashcam Video with Multi-Task Vision-Language Models
 
-Official code and results for:
+Official code, evaluation configurations, split definitions, and reported
+prediction artifacts for:
 
-> **Text-Free Differentiable Fault-Ratio Adjudication from First-Person Dashcam Video with Soft-Chained Vision–Language Models**
-> Jiwoong Heo, Museon Choe, Jaehwan Yu, and Duk-Jo Kong
-> *Submitted to IEEE Transactions on Intelligent Vehicles (T-IV), 2026.*
+> **Text-Free Fault-Ratio Estimation from Dashcam Video with Multi-Task Vision-Language Models**  
+> Jiwoong Heo, Museon Choe, Jaehwan You, Jaedo Kwak, Jeongho Shin, and Duk-Jo Kong  
+> _Submitted to IEEE Transactions on Intelligent Vehicles (T-IV), 2026._
+
+This repository accompanies a text-free, role-structured multi-task
+vision-language framework for guideline-based fault-ratio estimation from
+first-person dashcam video. The framework jointly supervises counterpart
+maneuver, fault comparison, and fault-ratio prediction in a single forward
+pass. The ablations show that structured auxiliary supervision is the main
+source of the observed gains, whereas explicit soft inter-head chaining does
+not provide a consistent standalone accuracy advantage.
+
 
 A LoRA-adapted vision–language backbone with three lightweight heads (situation → comparison → fault ratio) that replaces text-mediated cascades with a fully differentiable, single-forward-pass pipeline for insurance-grade traffic fault-ratio adjudication.
 
