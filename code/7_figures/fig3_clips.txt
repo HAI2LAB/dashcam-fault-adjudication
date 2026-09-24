@@ -1,0 +1,12 @@
+# (a) Successful cases
+a bb_1_180610_vehicle_251_21646
+a bb_1_170701_pedestrian_222_22959
+# (b) Soft-chain recovery
+b bb_1_190105_bike_121_068
+b bb_1_200329_vehicle_125_171
+# (c) Characteristic failures
+c bb_1_200220_vehicle_47_250
+c bb_1_140326_vehicle_253_21570
+# (d) Backbone divergence
+d bb_1_200104_bike_230_22399
+d bb_1_130523_vehicle_144_219
