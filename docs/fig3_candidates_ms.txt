@@ -1,0 +1,60 @@
+
+=== a-success (non-Go-straight, one per maneuver): 10 total, showing 10 (frames-ready first) ===
+  [F] bb_1_201115_vehicle_240_27728                 sit  Rear-end/Collision->Rear-end/Collision  cmp 0->0 ratio 0->0
+  [F] bb_1_150421_vehicle_198_072                   sit          Overtaking->Overtaking          cmp 2->2 ratio 100->100
+  [F] bb_1_200211_vehicle_148_244                   sit             Reverse->Reverse             cmp 2->2 ratio 70->70
+      bb_1_210803_vehicle_312_003                   sit   Lane change/Merge->Lane change/Merge   cmp 1->1 ratio 50->50
+      bb_1_170701_pedestrian_222_22959              sit Pedestrian/Crossing->Pedestrian/Crossing cmp 0->0 ratio 0->0
+      bb_1_220502_vehicle_142_017                   sit          Roundabout->Roundabout          cmp 2->2 ratio 80->80
+      bb_1_200424_vehicle_240_21595                 sit               Other->Other               cmp 0->0 ratio 10->10
+      bb_1_161014_vehicle_249_21715                 sit          Right turn->Right turn          cmp 1->1 ratio 50->50
+      bb_1_201128_two-wheeled-vehicle_241_22453     sit           Left turn->Left turn           cmp 2->2 ratio 80->80
+      bb_1_190623_vehicle_142_108                   sit           Stop/Park->Stop/Park           cmp 2->2 ratio 80->80
+
+=== a-success extreme 0:100/100:0: 350 total, showing 6 (frames-ready first) ===
+  [F] bb_1_220116_two-wheeled-vehicle_47_004        sit         Go straight->Go straight         cmp 0->0 ratio 0->0
+  [F] bb_1_201115_vehicle_240_27728                 sit  Rear-end/Collision->Rear-end/Collision  cmp 0->0 ratio 0->0
+  [F] bb_1_180610_vehicle_251_21646                 sit  Rear-end/Collision->Rear-end/Collision  cmp 2->2 ratio 100->100
+  [F] bb_1_150421_vehicle_198_072                   sit          Overtaking->Overtaking          cmp 2->2 ratio 100->100
+  [F] bb_1_150621_vehicle_218_34287                 sit         Go straight->Go straight         cmp 0->0 ratio 0->0
+      bb_1_220715_two-wheeled-vehicle_190_105       sit         Go straight->Go straight         cmp 0->0 ratio 0->0
+
+=== b-recovery (Sit✗ Cmp✓ Ratio✓): 145 total, showing 12 (frames-ready first) ===
+  [F] bb_1_190105_bike_121_068                      sit             Reverse->Other               cmp 2->2 ratio 60->60
+  [F] bb_1_170728_vehicle_224_22983                 sit           Left turn->Go straight         cmp 0->0 ratio 40->40
+  [F] bb_1_200329_vehicle_125_171                   sit              U-turn->Go straight         cmp 0->0 ratio 20->20
+      bb_1_220326_vehicle_200_51133                 sit  Rear-end/Collision->Overtaking          cmp 2->2 ratio 100->100
+      bb_1_200527_vehicle_257_50134                 sit         Go straight->Lane change/Merge   cmp 0->0 ratio 30->30
+      bb_1_190329_bike_232_20660                    sit           Left turn->Pedestrian/Crossing cmp 0->0 ratio 40->40
+      bb_1_180530_vehicle_45_205                    sit  Rear-end/Collision->Go straight         cmp 0->0 ratio 0->0
+      bb_1_171122_two-wheeled-vehicle_242_22458     sit   Lane change/Merge->Go straight         cmp 2->2 ratio 60->60
+      bb_1_220731_two-wheeled-vehicle_240_21717     sit         Go straight->Rear-end/Collision  cmp 0->0 ratio 0->0
+      bb_1_170418_vehicle_145_112                   sit  Rear-end/Collision->Go straight         cmp 2->2 ratio 100->100
+      bb_1_190629_vehicle_256_29442                 sit  Rear-end/Collision->Go straight         cmp 0->0 ratio 0->0
+      bb_1_130527_vehicle_202_26531                 sit  Rear-end/Collision->Go straight         cmp 2->2 ratio 100->100
+
+=== c-equal-fault failure: 119 total, showing 6 (frames-ready first) ===
+  [F] bb_1_200220_vehicle_47_250                    sit         Go straight->Go straight         cmp 1->0 ratio 50->0
+  [F] bb_1_200104_bike_230_22399                    sit   Lane change/Merge->Rear-end/Collision  cmp 1->2 ratio 50->50
+  [F] bb_1_160227_vehicle_235_50875                 sit         Go straight->Rear-end/Collision  cmp 1->0 ratio 50->0
+  [F] bb_1_180915_pedestrian_206_22255              sit Pedestrian/Crossing->Pedestrian/Crossing cmp 1->0 ratio 50->40
+      bb_1_160713_vehicle_248_55443                 sit         Go straight->Go straight         cmp 1->0 ratio 50->30
+      bb_1_190211_vehicle_21_276                    sit         Go straight->Rear-end/Collision  cmp 1->2 ratio 50->100
+
+=== c-70/80 band failure: 179 total, showing 6 (frames-ready first) ===
+  [F] bb_1_140326_vehicle_253_21570                 sit  Rear-end/Collision->Go straight         cmp 2->0 ratio 80->30
+  [F] bb_1_181123_vehicle_237_21720                 sit          Roundabout->Go straight         cmp 2->0 ratio 80->20
+  [F] bb_1_160728_two-wheeled-vehicle_118_005       sit           Stop/Park->Rear-end/Collision  cmp 2->0 ratio 70->0
+  [F] bb_1_170716_vehicle_118_070                   sit          Right turn->Go straight         cmp 2->0 ratio 80->30
+  [F] bb_1_180703_vehicle_195_187                   sit  Rear-end/Collision->Rear-end/Collision  cmp 2->0 ratio 80->30
+  [F] bb_1_210701_two-wheeled-vehicle_247_22003     sit          Right turn->Go straight         cmp 2->0 ratio 70->0
+
+=== d-IV✓ Q3✗ (non-Go-straight): 135 total, showing 8 (frames-ready first) ===
+  [F] bb_1_200104_bike_230_22399                    sit   Lane change/Merge->Rear-end/Collision  cmp 1->2 ratio 50->50  q3 90
+  [F] bb_1_150421_vehicle_198_072                   sit          Overtaking->Overtaking          cmp 2->2 ratio 100->100  q3 30
+  [F] bb_1_180512_vehicle_144_232                   sit          Roundabout->Left turn           cmp 2->0 ratio 80->80  q3 30
+      bb_1_181008_bike_253_21691                    sit Pedestrian/Crossing->Rear-end/Collision  cmp 0->2 ratio 0->0  q3 80
+      bb_1_130523_vehicle_144_219                   sit  Rear-end/Collision->Rear-end/Collision  cmp 2->0 ratio 100->100  q3 0
+      bb_1_190102_bike_259_21794                    sit Pedestrian/Crossing->Rear-end/Collision  cmp 0->1 ratio 40->40  q3 50
+      bb_1_200927_vehicle_203_22110                 sit  Rear-end/Collision->Rear-end/Collision  cmp 2->2 ratio 100->100  q3 30
+      bb_1_200527_vehicle_257_50134                 sit         Go straight->Lane change/Merge   cmp 0->0 ratio 30->30  q3 50

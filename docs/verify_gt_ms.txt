@@ -1,0 +1,57 @@
+129:def get_fault_gt(jp):
+130-    """JSON → accident_type → (rate_a, rate_b). 비율 GT."""
+131-    try:
+132-        j = json.load(open(jp, encoding="utf-8"))
+133-        at = _get_field(j, ["traffic_accident_type", "accident_type"])
+134-        if at is None: return None
+135-        at = int(at)
+136-        m = CSV_MAP.get(at, {})
+137-        ra, rb = int(float(m["Fault_Ratio_A"])), int(float(m["Fault_Ratio_B"]))
+138-        return ra, rb
+139-    except Exception:
+140-        return None
+141-
+142-def compare_label(ra, rb):
+143-    """3-class: 0=B>A(블박차B 과실↑), 1=A=B, 2=A>B(상대A 과실↑)
+144-       ra=상대(A) 과실, rb=블박(B) 과실"""
+145-    if abs(ra - rb) <= 1: return 1        # 동등
+146-    return 2 if ra > rb else 0            # A>B : B>A
+147-
+148-COMPARE_NAMES = ["B>A (블랙박스차 과실↑)", "A=B (동등)", "A>B (상대차 과실↑)"]
+149-
+150-# 프롬프트 (텍스트 생성 아님 — VLM이 영상+질문을 인코딩하게만)
+151-PROMPT = (
+77:def coarse_direction(s):
+78-    s = (s or "").lower()
+79-    if any(k in s for k in ['walk','pedestrian','playing','lying','sidewalk']): return "Pedestrian/Crossing"
+80-    if 'crossing' in s and 'car' not in s: return "Pedestrian/Crossing"
+81-    if 'rear-end' in s or 'collided' in s or 'collision' in s: return "Rear-end/Collision"
+82-    if 'u-turn' in s or 'u turn' in s or 'daewoo' in s: return "U-turn"
+83-    if 'reverse' in s or 'backward' in s: return "Reverse"
+84-    if 'overtaking' in s or 'passing' in s: return "Overtaking"
+85-    if any(k in s for k in ['change course','lane change','career change','change route','merge','shoulder road']): return "Lane change/Merge"
+86-    if 'center line' in s or 'one-way' in s or 'opposite' in s: return "Centerline violation"
+87-    if 'stop and depart' in s or 'parked' in s or 'park' in s: return "Stop/Park"
+88-    if 'left' in s and 'turn' in s: return "Left turn"
+89-    if 'right' in s and 'turn' in s: return "Right turn"
+90-    if 'straight' in s or 'trailing' in s or 'leading' in s or 'preceding' in s or 'falling behind' in s: return "Go straight"
+91-    if 'left' in s: return "Left turn"
+92-    if 'right' in s: return "Right turn"
+93-    if 'roundabout' in s: return "Roundabout"
+94-    if 'crossing' in s: return "Pedestrian/Crossing"
+95-    return "Other"
+96-
+97-SITUATION_CLASSES = ["Go straight","Left turn","Right turn","U-turn","Reverse",
+98-    "Lane change/Merge","Overtaking","Rear-end/Collision","Roundabout",
+99-    "Centerline violation","Stop/Park","Pedestrian/Crossing","Other"]
+100-SIT2IDX = {c: i for i, c in enumerate(SITUATION_CLASSES)}
+101-
+102-def get_situation_gt(jp):
+103-    """JSON → accident_type → A_Direction → 대분류 인덱스(0~12)"""
+104-    try:
+105-        j = json.load(open(jp, encoding="utf-8"))
+106-        at = _get_field(j, ["traffic_accident_type", "accident_type"])
+107-        if at is None: return None
+
+=== 998 not-in-codebook breakdown ===
+[]

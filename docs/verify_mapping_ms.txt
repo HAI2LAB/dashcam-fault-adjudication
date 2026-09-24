@@ -1,0 +1,28 @@
+100-SIT2IDX = {c: i for i, c in enumerate(SITUATION_CLASSES)}
+101-
+102:def get_situation_gt(jp):
+103-    """JSON → accident_type → A_Direction → 대분류 인덱스(0~12)"""
+104-    try:
+105-        j = json.load(open(jp, encoding="utf-8"))
+106-        at = _get_field(j, ["traffic_accident_type", "accident_type"])
+107-        if at is None: return None
+108-        adir = CSV_MAP.get(int(at), {}).get("A_Direction", "")
+109-        return SIT2IDX.get(coarse_direction(adir), SIT2IDX["Other"])
+110-    except Exception:
+111-        return None
+112-
+113-def load_split(txt_path):
+114-    return [tuple(line.strip().split("\t")) for line in open(txt_path, encoding="utf-8") if line.strip()]
+115-
+116-def _get_field(j, keys):
+117-    """agent1_pipeline과 동일: j 및 j['video']에서 첫 매치, 없으면 None"""
+118-    containers = []
+119-    if isinstance(j, dict):
+120-        containers.append(j)
+121-        v = j.get("video")
+122-        if isinstance(v, dict): containers.append(v)
+123-    for cont in containers:
+124-        for k in keys:
+125-            if k in cont and cont[k] is not None:
+126-                return cont[k]
+127-    return None

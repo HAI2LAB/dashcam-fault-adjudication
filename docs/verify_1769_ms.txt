@@ -1,0 +1,17 @@
+./backup/integrated/integrated_pipeline.py:8:  - overall 데이터(split_test_overall.txt, 학습에 안 쓰인 별도 세트)로 평가
+./backup/integrated/integrated_pipeline.py:62:OVERALL_SPLIT = os.path.join(DATA_DIR, "split_test_overall.txt")
+./backup/setup_env.sh:92:for f in "split_train.txt" "split_val.txt" "split_test_finetuning.txt" "split_test_overall.txt" "1.Training/accident_mapping_en.csv"; do
+./backup/common/make_stratified_val.py:130:print(f"   split_test_overall.txt    (통합평가용, 변경없음)")
+./run_paper_bb1.sh:29:for s in ['split_train_v2','split_finetune_val','split_test_finetuning','split_zeroshot','split_test_overall']:
+backup/integrated/integrated_pipeline.py:8:  - overall 데이터(split_test_overall.txt, 학습에 안 쓰인 별도 세트)로 평가
+backup/integrated/integrated_pipeline.py:62:OVERALL_SPLIT = os.path.join(DATA_DIR, "split_test_overall.txt")
+backup/setup_env.sh:92:for f in "split_train.txt" "split_val.txt" "split_test_finetuning.txt" "split_test_overall.txt" "1.Training/accident_mapping_en.csv"; do
+backup/common/make_stratified_val.py:130:print(f"   split_test_overall.txt    (통합평가용, 변경없음)")
+backup/old_backup/integrated_pipeline.py:8:  - overall 데이터(split_test_overall.txt, 학습에 안 쓰인 별도 세트)로 평가
+backup/old_backup/integrated_pipeline.py:41:OVERALL_SPLIT = os.path.join(DATA_DIR, "split_test_overall.txt")
+78:    ap.add_argument('--train_split', default='split_train_v2_bb1.txt')
+79:    ap.add_argument('--test_split', default='split_test_finetuning_bb1.txt')
+82:    print(f"📥 train 라벨 수집 ({args.train_split})...")
+83:    train = load_pairs(args.train_split)
+101:    print(f"\n📥 test 로드 ({args.test_split})...")
+102:    test = load_pairs(args.test_split)

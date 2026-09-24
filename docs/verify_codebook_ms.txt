@@ -1,0 +1,10 @@
+total=11279 codebook_match=10249 mismatch=32 type_not_in_codebook=998
+gt source check: get_fault_gt returns see examples
+   ('bb_1_160709_vehicle_130_192.json', '0', 70, '80', 80)
+   ('bb_1_151021_vehicle_255_25339.json', '53', 0, '20', 20)
+   ('bb_1_111105_vehicle_126_261.json', '0', 100, '80', 80)
+   ('bb_1_171107_two-wheeled-vehicle_191_159.json', '0', 0, '80', 80)
+   ('bb_1_190911_vehicle_114_147.json', '0', 20, '80', 80)
+   ('bb_1_180222_two-wheeled-vehicle_46_022.json', '0', 20, '80', 80)
+   ('bb_1_190415_pedestrian_15_009.json', '190', 0, '30', 30)
+   ('bb_1_180607_vehicle_192_142.json', '0', 40, '80', 80)

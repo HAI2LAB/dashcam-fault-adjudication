@@ -1,0 +1,45 @@
+
+=== train: usable=7566 ===
+SIT: {'Go straight': 3997, 'Rear-end/Collision': 1867, 'Pedestrian/Crossing': 366, 'Lane change/Merge': 342, 'Left turn': 240, 'Reverse': 216, 'Other': 152, 'Overtaking': 121, 'Stop/Park': 100, 'Right turn': 98, 'Roundabout': 44, 'U-turn': 15, 'Centerline violation': 8}
+CMP (0=B>A,1=eq,2=A>B): {0: 5089, 1: 347, 2: 2130}
+RATIO_A: {0: 1365, 10: 237, 20: 635, 30: 2389, 40: 458, 50: 352, 60: 347, 70: 158, 80: 360, 90: 25, 100: 1240}
+CATEGORY: {'vehicle': 6355, 'two-wheeled-vehicle': 593, 'bike': 342, 'pedestrian': 276}
+YEAR: {'2000': 35, '2001': 23, '2002': 32, '2003': 3, '2006': 2, '2007': 4, '2008': 3, '2009': 6, '2010': 45, '2011': 75, '2012': 164, '2013': 310, '2014': 344, '2015': 555, '2016': 717, '2017': 915, '2018': 867, '2019': 850, '2020': 789, '2021': 976, '2022': 851}
+LOCATION(train, top10): [('0', 4220), ('2', 842), ('1', 700), ('3', 570), ('13', 476), ('5', 206), ('4', 143), ('9', 136), ('6', 129), ('11', 46)]
+
+=== val: usable=876 ===
+SIT: {'Go straight': 460, 'Rear-end/Collision': 207, 'Pedestrian/Crossing': 38, 'Lane change/Merge': 36, 'Left turn': 35, 'Reverse': 27, 'Right turn': 18, 'Other': 18, 'Overtaking': 14, 'Stop/Park': 11, 'U-turn': 5, 'Roundabout': 5, 'Centerline violation': 2}
+CMP (0=B>A,1=eq,2=A>B): {0: 591, 1: 42, 2: 243}
+RATIO_A: {0: 154, 10: 30, 20: 82, 30: 264, 40: 60, 50: 43, 60: 39, 70: 20, 80: 40, 90: 1, 100: 143}
+CATEGORY: {'vehicle': 713, 'two-wheeled-vehicle': 88, 'bike': 46, 'pedestrian': 29}
+YEAR: {'2000': 10, '2001': 2, '2002': 3, '2010': 4, '2011': 10, '2012': 20, '2013': 31, '2014': 36, '2015': 86, '2016': 85, '2017': 98, '2018': 93, '2019': 92, '2020': 106, '2021': 119, '2022': 81}
+
+=== test: usable=2837 ===
+SIT: {'Go straight': 1461, 'Rear-end/Collision': 678, 'Pedestrian/Crossing': 149, 'Lane change/Merge': 123, 'Left turn': 106, 'Reverse': 85, 'Overtaking': 54, 'Stop/Park': 54, 'Other': 53, 'Right turn': 42, 'Roundabout': 19, 'U-turn': 10, 'Centerline violation': 3}
+CMP (0=B>A,1=eq,2=A>B): {0: 1877, 1: 142, 2: 818}
+RATIO_A: {0: 494, 10: 79, 20: 245, 30: 873, 40: 181, 50: 147, 60: 132, 70: 65, 80: 155, 90: 9, 100: 457}
+CATEGORY: {'vehicle': 2352, 'two-wheeled-vehicle': 235, 'bike': 138, 'pedestrian': 112}
+YEAR: {'2000': 8, '2001': 6, '2002': 5, '2003': 2, '2006': 1, '2007': 2, '2009': 1, '2010': 10, '2011': 35, '2012': 48, '2013': 98, '2014': 137, '2015': 192, '2016': 272, '2017': 366, '2018': 333, '2019': 346, '2020': 315, '2021': 351, '2022': 309}
+
+=== heldout: usable=2840 ===
+SIT: {'Go straight': 1449, 'Rear-end/Collision': 744, 'Lane change/Merge': 142, 'Pedestrian/Crossing': 130, 'Left turn': 87, 'Reverse': 75, 'Other': 55, 'Overtaking': 49, 'Right turn': 41, 'Stop/Park': 41, 'Roundabout': 19, 'U-turn': 6, 'Centerline violation': 2}
+CMP (0=B>A,1=eq,2=A>B): {0: 1897, 1: 120, 2: 823}
+RATIO_A: {0: 496, 10: 87, 20: 259, 30: 886, 40: 163, 50: 126, 60: 131, 70: 65, 80: 133, 90: 12, 100: 482}
+CATEGORY: {'vehicle': 2360, 'two-wheeled-vehicle': 243, 'bike': 130, 'pedestrian': 107}
+YEAR: {'2000': 12, '2001': 8, '2002': 18, '2003': 3, '2009': 5, '2010': 14, '2011': 35, '2012': 54, '2013': 116, '2014': 140, '2015': 186, '2016': 266, '2017': 304, '2018': 328, '2019': 336, '2020': 302, '2021': 398, '2022': 315}
+
+=== CODEBOOK ===
+type: dict | size: 434
+  0 -> {'Fault_Ratio_A': '80', 'Fault_Ratio_B': '20', 'A_Direction': 'Collided with the preceding car (first accident vehicle)'}
+  1 -> {'Fault_Ratio_A': '100', 'Fault_Ratio_B': '0', 'A_Direction': 'Rear-end collision'}
+  2 -> {'Fault_Ratio_A': '0', 'Fault_Ratio_B': '100', 'A_Direction': 'Collision with leading car behind'}
+  3 -> {'Fault_Ratio_A': '40', 'Fault_Ratio_B': '60', 'A_Direction': 'Go straight from the main line'}
+
+=== SAMPLE JSON KEYS ===
+['info', 'video']
+video: {'video_name': 'bb_1_160109_vehicle_213_22483', 'video_date': '161222', 'filming_way': 'bb', 'video_point_of_view': '1', 'accident_negligence_rateA': '30', 'accident_negligence_rateB': '70', 'traffic_accident_type': '11', 'accident_object': '0', 'accident_place': '0', 'accident_place_feature': '6', 'vehicle_a_progress_info': '9', 'vehicle_b_progress_info': '10'}
+
+=== VIDEO SPECS (20 random clips) ===
+  1920x1080 @ 15.0fps, 10.0s : 18 clips
+  1920x926 @ 15.0fps, 10.0s : 1 clips
+  1280x720 @ 15.0fps, 10.0s : 1 clips

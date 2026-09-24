@@ -1,0 +1,41 @@
+=== TS 논문(TIV) 수치 근거 폴더 — 2026-09-08 세션 ===
+작성: 최무선 (Claude 보조). 원본 무이동, 전부 사본.
+
+[A] Hard-chained ablation (제목 Soft-Chained 직접 검증)
+  결론: 공식 eval — 상황 0.615 / 비교acc 0.674 / F1 0.504 / MAE 25.39 / W±10 0.526 / 5구간 0.502
+        (soft: 0.610/0.671/0.496/24.6/0.534/0.509) → 범주 과제 동률(시드 노이즈 이내),
+        비율 정밀도(MAE·W±10·5구간)는 soft 일관 우위. 단일 런.
+  논문 반영: Table III 미니패널 + V-E 2~3문장 + IV-D 연결
+  근거: A_hard_chain/ (eval json, 실행명령.txt)
+
+[B] Zero-shot 진단 "2%-9%" 근거 (S-VIII 신설)
+  결론: 당시 agent1 결과(n=3,281, 1인칭 2,842 포함)에서
+        exact-match 0.000~0.018(하한), 13클래스 macro recall 0.077~0.084(상한) = "2~9%".
+        qwen은 3,281건 전원 Go straight 예측(붕괴 물증). 재실행 불필요.
+  프로토콜: 선택지 제시형 프롬프트(영어 강제, JSON 출력), 13클래스 키워드 매핑 채점.
+  논문 반영: Supplementary S-VIII(표+프로토콜) + 서론/V-A 산출방식 명시
+  근거: B_zeroshot_diag/ (재계산 스크립트, 출력, 원본 json 3개)
+  미확정: llama 정확 버전(video-specialized 서술 근거) — 박사님 확인 1건
+
+[C] Fig.3 정성 예시
+  결론: 후보 CSV(backup/supp_candidates.csv) 38개 중 bb_1 검수 → 18클립 수동 t₀ 지정 재추출 완료.
+        200425 탈락. 카테고리: 성공(A+B)·회복(C)·실패(D+E) 전부 충족. F(모델대비) 포함 여부 미결.
+  근거: C_fig3_clips/ + ~/TS_code/impact_shots_ms_0908_manual/
+
+[D] Table IV 캡션 n=3,288 → 2,837 확정
+  결론: oracle_bb1.json의 n_test=2837, 수치가 표와 소수점까지 일치. 3,288은 구버전 잔재.
+  근거: DE_data_counts/oracle_bb1.json
+
+[E] III-C "11 of 8,804" → "8 of 7,574" 확정
+  결론: 현행 필터(get_fault_gt) 기준 train 폐기 8. 교차검증: test 2,843→2,837 ✓, held-out 2,842→2,840 ✓.
+        8,804는 혼합 코퍼스 시절 train(backup/splits/split_train_v2.txt 실측).
+  근거: DE_data_counts/ (스크립트+출력), F_confirmations/old_mixed_corpus_split_sizes.txt
+
+[F] 스플릿 정합 확인 (M1)
+  결론: 4스플릿 서로소(중복 0), 전부 1.Training 파티션 → held-out=같은 풀.
+        III-A 11,297은 train/val/test 3개 합 → "across the training, validation, and
+        primary-test splits" 범위 명시로 수정 예정. 실행 스크립트가 bb1 스플릿 명시 전달 확인.
+  근거: F_confirmations/
+
+[남은 확인(박사님)] M4 MAE표기 / M5 제목 / M6 GPU / M7 공개 / M9 분량 / M10 공동1저자 /
+  llama 버전 / F카테고리 포함 / A 시드 추가 여부(44·45, soft와 동일 시드 권장)
