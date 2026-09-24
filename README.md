@@ -55,10 +55,12 @@ E2E_CHAIN=none bash run_nochain_ms.sh    # interface ablation example
 
 ```bibtex
 @article{heo2026textfree,
-  title   = {Text-Free Differentiable Fault-Ratio Adjudication from First-Person
-             Dashcam Video with Soft-Chained Vision--Language Models},
-  author  = {Heo, Jiwoong and Choe, Museon and Yu, Jaehwan and Kong, Duk-Jo},
-  journal = {IEEE Transactions on Intelligent Vehicles (under review)},
+  title   = {Text-Free Fault-Ratio Estimation from Dashcam Video with
+             Multi-Task Vision-Language Models},
+  author  = {Heo, Jiwoong and Choe, Museon and You, Jaehwan and
+             Kwak, Jaedo and Shin, Jeongho and Kong, Duk-Jo},
+  journal = {IEEE Transactions on Intelligent Vehicles},
+  note    = {Under review},
   year    = {2026}
 }
 ```
