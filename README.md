@@ -16,7 +16,11 @@ source of the observed gains, whereas explicit soft inter-head chaining does
 not provide a consistent standalone accuracy advantage.
 
 
-A LoRA-adapted vision–language backbone with three lightweight heads (situation → comparison → fault ratio) that replaces text-mediated cascades with a fully differentiable, single-forward-pass pipeline for insurance-grade traffic fault-ratio adjudication.
+A LoRA-adapted vision-language backbone with three jointly trained prediction
+heads (situation → comparison → fault ratio). The framework replaces
+text-mediated cascades with a single-forward-pass, role-structured multi-task
+pipeline.
+
 
 ## Repository layout (numbered in paper order)
 
